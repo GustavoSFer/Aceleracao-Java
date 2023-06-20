@@ -1,4 +1,4 @@
-package estruturaCondERepeticao;
+package Bloco1;
 
 public class Condicionais {
 
