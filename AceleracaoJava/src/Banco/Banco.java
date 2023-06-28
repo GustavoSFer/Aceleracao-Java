@@ -27,6 +27,15 @@ public class Banco {
     int result = a + b;
     System.out.println("A soma é: " + result);
 
+    System.out.println("======================");
+
+
+    System.out.print("Informa sua altura: ");
+    String alturaEntrada = teclado.next();
+
+    float altura = Float.parseFloat(alturaEntrada);
+    System.out.println("Sua altura é: " + altura);
+
 
     teclado.close();
 
