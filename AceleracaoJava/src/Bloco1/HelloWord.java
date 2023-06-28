@@ -7,6 +7,10 @@ public class HelloWord {
 
     System.out.println(saudacao);
 
+    // Verificando a raiz quadrada de 25
+    double result = Math.sqrt(25);
+    System.out.println(result);
+
   }
 
 }
