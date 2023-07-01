@@ -1,6 +1,13 @@
 package OrientacaoObjeto;
 
 public class AbstracaoLivro {
-  String nome;
+  private String nome;
 
+  AbstracaoLivro(String nome) {
+    this.nome = nome;
+  }
+
+  public String getNome() {
+    return this.nome;
+  }
 }
