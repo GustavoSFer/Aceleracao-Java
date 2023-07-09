@@ -14,8 +14,11 @@ public class arraySoma {
       soma += a[i];
     }
     System.out.println("A soma do array é: " + soma);
+
+    // Mudando o valor da posição 4
+    a[4] = 100;
+
+
   }
 
-  // Mudando o valor da posição 4
-  a[4]=100;
 }
