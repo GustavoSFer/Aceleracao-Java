@@ -18,6 +18,11 @@ public class arraySoma {
     // Mudando o valor da posição 4
     a[4] = 100;
 
+    System.out.println();
+    // Imprimindo cada valor do array em uma linha
+    for (int i = 0; i < a.length; i++) {
+      System.out.println(a[i]);
+    }
 
   }
 
