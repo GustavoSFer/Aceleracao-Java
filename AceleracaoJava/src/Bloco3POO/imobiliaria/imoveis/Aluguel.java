@@ -13,4 +13,20 @@ public class Aluguel extends Imovel {
     this.alugado = false;
   }
 
+  public double getValorAluguel() {
+    return valorAluguel;
+  }
+
+  public void setValorAluguel(double valorAluguel) {
+    this.valorAluguel = valorAluguel;
+  }
+
+  public boolean isAlugado() {
+    return alugado;
+  }
+
+  public void alugar() {
+    this.alugado = true;
+  }
+
 }
