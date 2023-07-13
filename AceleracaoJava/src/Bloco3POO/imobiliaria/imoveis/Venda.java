@@ -12,5 +12,21 @@ public class Venda extends Imovel {
     this.alugado = false;
   }
 
+  public double getValorVenda() {
+    return valorVenda;
+  }
+
+  public void setValorVenda(double valorVenda) {
+    this.valorVenda = valorVenda;
+  }
+
+  public boolean isAlugado() {
+    return alugado;
+  }
+
+  public void alugar() {
+    this.alugado = true;
+  }
+
 
 }
