@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Imovel {
   private String endereco;
   private LocalDate date;
-  private boolean ativo;
+  protected boolean ativo;
 
   public Imovel(String endereco, LocalDate date) {
     super();

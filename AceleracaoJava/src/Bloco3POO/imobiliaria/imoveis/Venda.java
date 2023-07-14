@@ -25,7 +25,9 @@ public class Venda extends Imovel {
   }
 
   public void alugar() {
-    this.alugado = true;
+    if (ativo) {
+      this.alugado = true;
+    }
   }
 
 

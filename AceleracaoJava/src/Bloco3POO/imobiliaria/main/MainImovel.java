@@ -15,7 +15,14 @@ public class MainImovel {
     System.out.println("Endereço do apartamento: " + apto2.getEndereco());
     System.out.println("O valor do venda é: R$ " + apto2.getValorAluguel());
 
+    apto1.alugar();
+    System.out.println("Alugado: " + apto1.isAlugado());
 
+    System.out.println();
+    System.out.println("=== Ativando o imovel e alugando ===");
+    apto1.ativarImovel();
+    apto1.alugar();
+    System.out.println("Alugado: " + apto1.isAlugado());
 
   }
 
