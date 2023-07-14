@@ -24,6 +24,10 @@ public class MainImovel {
     apto1.alugar();
     System.out.println("Alugado: " + apto1.isAlugado());
 
+    System.out.println();
+    apto2.alugar();
+    System.out.println("Alugado: " + apto2.isAlugado());
+
   }
 
 }
