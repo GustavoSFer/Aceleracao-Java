@@ -14,4 +14,9 @@ public class Agenda extends Pessoa {
     return this.listaPessoa;
   }
 
+  public int posicaoPessoa(String nome) {
+    int index = listaPessoa.indexOf(nome);
+    return index;
+  }
+
 }
