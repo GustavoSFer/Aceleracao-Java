@@ -11,8 +11,7 @@ public class Circulo implements IArea {
 
   @Override
   public double area() {
-    // TODO Auto-generated method stub
-    return 0;
+    return PI * Math.pow(raio, 2);
   }
 
 }
