@@ -11,14 +11,12 @@ public class PessoaCandidata extends Pessoa {
 
   @Override
   public String getNome() {
-    // TODO Auto-generated method stub
-    return null;
+    return super.nome;
   }
 
   @Override
   public void setNome(String nome) {
-    // TODO Auto-generated method stub
-
+    super.nome = nome;
   }
 
 }
