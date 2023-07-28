@@ -1,11 +1,7 @@
 package SistemaDeVotacao;
 
 public abstract class Pessoa {
-  private String nome;
-
-  public Pessoa(String nomeObj) {
-    this.nome = nomeObj;
-  }
+  protected String nome;
 
   public abstract String getNome();
 
