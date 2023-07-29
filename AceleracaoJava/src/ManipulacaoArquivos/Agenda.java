@@ -26,6 +26,15 @@ public class Agenda {
         this.contatoBanco.createNewFile();
       }
       
+      escreverNoArquivo = new FileWriter(contatoBanco, true);
+      escritor = new BufferedWriter(escreverNoArquivo);
+      
+      escritor.write(pessoa.toString());
+      escritor.newLine();
+      escritor.flush();
+      
+      escreverNoArquivo.close();
+      escritor.close();
     } catch() {
       
     }
