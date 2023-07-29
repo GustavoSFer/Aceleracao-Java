@@ -3,9 +3,17 @@ package ManipulacaoArquivos;
 import java.util.ArrayList;
 
 public class Agenda {
-  ArrayList<Pessoa> pessoa;
+  private ArrayList<Pessoa> pessoas;
 
-  public Agenda(String nome, int phone) {
-    pessoa.add(new Pessoa(nome, phone));
+  public void addPessoa(String nome, int phone) {
+    pessoas.add(new Pessoa(nome, phone));
+  }
+
+  public void listarAgenda() {
+    System.out.println("=== Listar Pessoas ===");
+    for (Pessoa pessoa : pessoas) {
+      System.out.println(pessoa.getNome() + " - " + pessoa.getPhone());
+    }
+    System.out.println("   -----------   ");
   }
 }
