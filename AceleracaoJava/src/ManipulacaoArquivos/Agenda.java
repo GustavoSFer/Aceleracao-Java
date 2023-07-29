@@ -1,7 +1,9 @@
 package ManipulacaoArquivos;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
@@ -46,12 +48,29 @@ public class Agenda {
   }
 
   public void listarAgenda() {
-    System.out.println();
-    System.out.println("=== Listar Pessoas ===");
-    for (Pessoa pessoa : pessoas) {
-      System.out.println(pessoa.getNome() + " - " + pessoa.getPhone());
+    try {
+      FileReader lerArquivo = null;
+      BufferedReader bufferLer = null;
+
+      if (contatoBanco.exists()) {
+        lerArquivo = new FileReader(contatoBanco);
+        bufferLer = new BufferedReader(lerArquivo);
+
+        String conteudoLinha = bufferLer.readLine();
+
+        System.out.println();
+        System.out.println("=== Listar Pessoas ===");
+        while (conteudoLinha != null) {
+          System.out.println(conteudoLinha);
+          conteudoLinha = bufferLer.readLine();
+        }
+        System.out.println("   -----------   ");
+        lerArquivo.close();
+        bufferLer.close();
+      }
+    } catch (Exception e) {
+      System.out.println(e);
+      e.printStackTrace();
     }
-    System.out.println("   -----------   ");
-    System.out.println();
   }
 }
