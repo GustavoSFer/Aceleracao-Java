@@ -11,8 +11,7 @@ public class Agenda {
   private ArrayList<Pessoa> pessoas;
   File contatoBanco;
 
-  private static final String caminhoArquivo =
-      "C:\\Users\\Gamer\\OneDrive\\Área de Trabalho\\contatos\banco.txt";
+  private static final String caminhoArquivo = "C:\\contato\\banco.txt";
 
   public Agenda() {
     this.pessoas = new ArrayList<Pessoa>();

@@ -2,9 +2,9 @@ package ManipulacaoArquivos;
 
 public class Pessoa {
   private String nome;
-  private int phone;
+  private String phone;
 
-  public Pessoa(String nome, int phone) {
+  public Pessoa(String nome, String phone) {
     this.nome = nome;
     this.phone = phone;
   }
@@ -17,11 +17,11 @@ public class Pessoa {
     this.nome = nome;
   }
 
-  public int getPhone() {
+  public String getPhone() {
     return this.phone;
   }
 
-  public void setPhone(int phone) {
+  public void setPhone(String phone) {
     this.phone = phone;
   }
 

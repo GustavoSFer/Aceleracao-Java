@@ -22,7 +22,7 @@ public class Main {
           String nome = scanner.next();
 
           System.out.println("Informe o Telefone:");
-          Integer phone = Integer.parseInt(scanner.next());
+          String phone = scanner.next();
 
           agenda.addPessoa(new Pessoa(nome, phone));;
           break;
