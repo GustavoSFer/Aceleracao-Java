@@ -21,24 +21,28 @@ public class Agenda {
     try {
       FileWriter escreverNoArquivo = null;
       BufferedWriter escritor = null;
-      
+
       if (!this.contatoBanco.exists()) {
         this.contatoBanco.createNewFile();
       }
-      
+
       escreverNoArquivo = new FileWriter(contatoBanco, true);
       escritor = new BufferedWriter(escreverNoArquivo);
-      
+
       escritor.write(pessoa.toString());
       escritor.newLine();
       escritor.flush();
-      
+
       escreverNoArquivo.close();
       escritor.close();
-    } catch() {
-      
+
+      this.pessoas.add(pessoa);
+
+    } catch (Exception e) {
+      System.out.println(e);
+      e.printStackTrace();
     }
-   
+
   }
 
   public void listarAgenda() {
