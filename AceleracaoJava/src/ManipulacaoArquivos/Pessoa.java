@@ -24,4 +24,9 @@ public class Pessoa {
   public void setPhone(int phone) {
     this.phone = phone;
   }
+
+  @Override
+  public String toString() {
+    return this.nome + " - " + this.phone;
+  }
 }
