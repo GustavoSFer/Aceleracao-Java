@@ -14,19 +14,23 @@ public class Main {
       System.out.println("=== Escolha uma opção: ===");
       System.out
           .println("1- Adicionar pessoa: \n" + "2- Listar pessoas: \n" + "3- Sair do sistema: ");
+      opcao = scanner.nextInt();
 
       switch (opcao) {
         case 1:
           System.out.println("Infome o nome da pessoa:");
-          String nome = scanner.nextLine();
-          System.out.println("Informe o Telefone:");
-          int phone = scanner.nextInt();
+          String nome = scanner.next();
 
-          agenda.addPessoa(nome, phone);
+          System.out.println("Informe o Telefone:");
+          Integer phone = Integer.parseInt(scanner.next());
+
+          agenda.addPessoa(new Pessoa(nome, phone));;
           break;
         case 2:
+          agenda.listarAgenda();
           break;
         case 3:
+          System.out.println("Tchau! Até mais. :D");
           break;
       }
     }
