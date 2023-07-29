@@ -10,10 +10,10 @@ public class Main {
 
     Agenda agenda = new Agenda();
 
-    while (opcao != 3) {
+    while (opcao != 4) {
       System.out.println("=== Escolha uma opção: ===");
-      System.out
-          .println("1- Adicionar pessoa: \n" + "2- Listar pessoas: \n" + "3- Sair do sistema: ");
+      System.out.println("1- Adicionar pessoa: \n" + "2- Listar pessoas: \n"
+          + "3- Deletar arquivo\n" + "4- Sair do sistema: ");
       opcao = scanner.nextInt();
 
       switch (opcao) {
@@ -30,6 +30,9 @@ public class Main {
           agenda.listarAgenda();
           break;
         case 3:
+          agenda.excluirArquivo();
+          break;
+        case 4:
           System.out.println("Tchau! Até mais. :D");
           break;
       }

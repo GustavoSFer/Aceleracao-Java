@@ -71,5 +71,19 @@ public class Agenda {
       System.out.println(e);
       e.printStackTrace();
     }
+
+  }
+
+  public void excluirArquivo() {
+    try {
+      if (contatoBanco.exists()) {
+        contatoBanco.delete();
+        System.out.println("Arquivo de contatos deletado com sucesso!");
+      } else {
+        System.out.println("Não existe arquivo para ser deletado!");
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }
