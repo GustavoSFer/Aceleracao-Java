@@ -9,6 +9,12 @@ public class Comparacao {
 
     System.out.println(nome1 == nome2);
 
+    if (nome1 == nome2) {
+      System.out.println("São iguais!");
+    } else {
+      System.out.println("Diferentes!");
+    }
+
   }
 
 }
