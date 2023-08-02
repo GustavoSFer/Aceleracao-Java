@@ -15,6 +15,21 @@ public class ListaDeArrays {
     nome.add("Gusta");
 
     System.out.println(nome);
+
+    String nomes = "Laura,Rojer,Yuri,Renato";
+
+    String[] nomesEmArrays = nomes.split(",");
+
+    // Mostra a memória
+    System.out.println(nomesEmArrays);
+
+
+    System.out.println(nomesEmArrays[0]);
+
+    System.out.println("===========\n");
+    for (String n : nomesEmArrays) {
+      System.out.println(n);
+    }
   }
 
 }
