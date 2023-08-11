@@ -1,6 +1,8 @@
 package Erros;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 
 public class ErrorEmArquivos {
 
@@ -13,6 +15,9 @@ public class ErrorEmArquivos {
 
   public static void escreverNoArquivo(String caminhoArquivo) {
     File meuArquivo = new File(caminhoArquivo);
+
+    FileWriter escritor = null;
+    BufferedWriter bufferEscritor = null;
 
   }
 
