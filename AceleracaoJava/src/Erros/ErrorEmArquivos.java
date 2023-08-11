@@ -3,21 +3,26 @@ package Erros;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class ErrorEmArquivos {
 
   public static void main(String[] args) {
-    String caminho = "C:\\contato";
+    String caminho = "C:\\contato\file.txt";
 
 
 
   }
 
-  public static void escreverNoArquivo(String caminhoArquivo) {
+  public static void escreverNoArquivo(String caminhoArquivo) throws IOException {
     File meuArquivo = new File(caminhoArquivo);
 
     FileWriter escritor = null;
     BufferedWriter bufferEscritor = null;
+
+    if (!meuArquivo.exists()) {
+      meuArquivo.createNewFile();
+    }
 
   }
 
