@@ -29,6 +29,12 @@ public class ErrorEmArquivos {
       meuArquivo.createNewFile();
     }
 
+    escritor = new FileWriter(meuArquivo);
+    bufferEscritor = new BufferedWriter(escritor);
+    bufferEscritor.write("Escrever algo1!");
+    bufferEscritor.newLine();
+    bufferEscritor.write("Escrever algo2!");
+    bufferEscritor.flush();
   }
 
 }
