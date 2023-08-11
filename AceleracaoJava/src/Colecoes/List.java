@@ -1,6 +1,7 @@
 package Colecoes;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class List {
 
@@ -14,6 +15,8 @@ public class List {
     numeros.add(7);
     numeros.add(10);
 
+    System.out.println(numeros);
+    Collections.sort(numeros);
     System.out.println(numeros);
   }
 
