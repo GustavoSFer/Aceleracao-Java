@@ -8,8 +8,13 @@ import java.io.IOException;
 public class ErrorEmArquivos {
 
   public static void main(String[] args) {
-    String caminho = "C:\\contato\file.txt";
-
+    String caminho = "C:\\contato/file.txt";
+    try {
+      escreverNoArquivo(caminho);
+    } catch (IOException e) {
+      e.printStackTrace();
+      System.out.println("Deu ruim");
+    }
 
 
   }
