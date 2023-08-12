@@ -1,6 +1,6 @@
 package Colecoes;
 
-import java.util.Set;
+import java.util.HashMap;
 
 public class ColecaoSet {
 
@@ -16,9 +16,15 @@ public class ColecaoSet {
     //
     // System.out.println(numeros);
 
-    var estudantes = Set.of("João", "Maria", "Pedro", "Rosa");
+    // var estudantes = Set.of("João", "Maria", "Pedro", "Rosa");
+    //
+    // System.out.println(estudantes);
 
-    System.out.println(estudantes);
+
+    var estudantes = new HashMap<String, String>();
+    estudantes.put("x038702", "João");
+    estudantes.put("x784244", "Maria");
+    estudantes.put("x105852", "Joana");
 
   }
 
