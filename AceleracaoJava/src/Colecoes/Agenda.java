@@ -13,4 +13,8 @@ public class Agenda {
     this.contatos.remove(nome);
   }
 
+  public String retornaTelefone(String nome) {
+    return this.contatos.get(nome);
+  }
+
 }
