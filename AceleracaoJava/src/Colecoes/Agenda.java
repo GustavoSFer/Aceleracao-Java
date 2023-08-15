@@ -9,4 +9,8 @@ public class Agenda {
     contatos.put(nome, telefone);
   }
 
+  public void excluirContato(String nome) {
+    this.contatos.remove(nome);
+  }
+
 }
