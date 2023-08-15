@@ -17,4 +17,8 @@ public class Agenda {
     return this.contatos.get(nome);
   }
 
+  public int tamanhoAgenda() {
+    return this.contatos.size();
+  }
+
 }

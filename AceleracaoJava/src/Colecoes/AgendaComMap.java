@@ -7,10 +7,11 @@ public class AgendaComMap {
 
     ag.cadastrarPessoa("Gustavo", "11-112458744");
     System.out.println(ag.retornaTelefone("Gustavo"));
+    System.out.println(ag.tamanhoAgenda());
 
     ag.excluirContato("Gustavo");
     System.out.println(ag.retornaTelefone("Gustavo"));
-
+    System.out.println(ag.tamanhoAgenda());
   }
 
 }
