@@ -43,8 +43,9 @@ public class BrincandoComNumeros {
         numeros.stream().filter(e -> (e > 50)).collect(Collectors.toList());
     maiorCinquenta.stream().forEach(e -> System.out.print(e + ", "));
 
+    System.out.println("\n\n========\nMostre somente os 3 primeiros numeros da lista");
     // Mostre somente os 3 primeiros numeros da lista
-
+    numeros.stream().limit(3).forEach(e -> System.out.println(e));
     // Mostre os 2 ultimos elementos da lista
 
   }
