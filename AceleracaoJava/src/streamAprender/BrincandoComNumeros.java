@@ -25,8 +25,10 @@ public class BrincandoComNumeros {
     // Não mostrar os numeros repetidos
     numeros.stream().distinct().forEach(e -> System.out.print(e + ", "));
 
+    System.out.println("\n\n========\nRealizar o soma dos elementos");
     // Realizar o soma dos elementos
-
+    int soma = numeros.stream().reduce((e, acc) -> acc + e).get();
+    System.out.println(soma);
   }
 
 }
