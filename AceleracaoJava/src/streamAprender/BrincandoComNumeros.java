@@ -16,7 +16,10 @@ public class BrincandoComNumeros {
     List<Integer> pares = numeros.stream().filter(e -> e % 2 == 0).collect(Collectors.toList());
     pares.stream().forEach(e -> System.out.print(e + ", "));
 
+    System.out.println("\n\n========\nIimprimir os elementos em orde crescente");
     // imprimir os elementos em orde crescente
+    List<Integer> ordenados = numeros.stream().sorted().collect(Collectors.toList());
+    ordenados.stream().forEach(e -> System.out.print(e + ", "));
 
     // Não mostrar os numeros repetidos
 
