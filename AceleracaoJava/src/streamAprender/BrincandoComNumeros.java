@@ -37,7 +37,11 @@ public class BrincandoComNumeros {
     int qtdLista = (int) numeros.stream().distinct().count();
     System.out.println(qtdLista);
 
+    System.out.println("\n\n========\nFiltra os numeros que seja maior que 50");
     // Filtra os numeros que seja maior que 50
+    List<Integer> maiorCinquenta =
+        numeros.stream().filter(e -> (e > 50)).collect(Collectors.toList());
+    maiorCinquenta.stream().forEach(e -> System.out.print(e + ", "));
 
     // Mostre somente os 3 primeiros numeros da lista
 
