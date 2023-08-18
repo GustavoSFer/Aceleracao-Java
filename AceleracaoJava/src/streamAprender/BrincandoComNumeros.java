@@ -7,6 +7,9 @@ import java.util.stream.Collectors;
 public class BrincandoComNumeros {
 
   public static void main(String[] args) {
+    System.out.println("=== PRATICANDO STREAM() ===");
+    System.out.println();
+
     List<Integer> numeros = Arrays.asList(1, 4, 56, 1, 56, 7, 8, 56, 4);
     // Imprimindo cada elemento da nossa lista
     numeros.stream().forEach(e -> System.out.print(e + ", "));
