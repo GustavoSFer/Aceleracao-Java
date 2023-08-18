@@ -29,6 +29,20 @@ public class BrincandoComNumeros {
     // Realizar o soma dos elementos
     int soma = numeros.stream().reduce((e, acc) -> acc + e).get();
     System.out.println(soma);
+
+
+    System.out
+        .println("\n\n========\nMostre quantos numeros tem na lista sem numeros repetidos (total)");
+    // Mostre quantos numeros tem na lista sem numeros repetidos (total)
+    int qtdLista = (int) numeros.stream().distinct().count();
+    System.out.println(qtdLista);
+
+    // Filtra os numeros que seja maior que 50
+
+    // Mostre somente os 3 primeiros numeros da lista
+
+    // Mostre os 2 ultimos elementos da lista
+
   }
 
 }
