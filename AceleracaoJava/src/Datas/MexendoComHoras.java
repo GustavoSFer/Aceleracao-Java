@@ -16,7 +16,7 @@ public class MexendoComHoras {
     if (now.isAfter(extra)) {
       System.out.println("Você esta fazendo hora extra!");
     } else {
-      System.out.println("Você Não está em hora extra.");
+      System.out.println("Você não está em hora extra.");
     }
   }
 }
