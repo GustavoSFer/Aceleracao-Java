@@ -10,6 +10,11 @@ public class QtdDiaNascimento {
 
     System.out.println(paulinho.calcularDiasNascimento("2023-08-20T12:45:00"));
 
+    int dias = (int) paulinho.calcularDiasNascimento("1992-04-20T12:45:00");
+    int anos = dias / 365;
+
+    System.out.println(anos);
+
   }
 
   public long calcularDiasNascimento(String dataNascimento) {
