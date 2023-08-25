@@ -10,6 +10,8 @@ public class AnoBissexto {
     System.out.println(biss.isBissexto(2024));
 
     System.out.println(biss.proximoAnoBissexto("01/01/2021"));
+
+    biss.adicionarAnos(10);
   }
 
   public boolean isBissexto(int ano) {
@@ -28,6 +30,12 @@ public class AnoBissexto {
       dataformatada = dataformatada.plusYears(1);
     }
     return dataformatada.getYear();
+  }
+
+  public void adicionarAnos(int anos) {
+    LocalDate now = LocalDate.now();
+
+    System.out.println(now.plusYears(anos));
   }
 
 }
