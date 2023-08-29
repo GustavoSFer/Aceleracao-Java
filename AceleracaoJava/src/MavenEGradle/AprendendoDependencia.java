@@ -89,6 +89,32 @@ public class AprendendoDependencia {
      * 
      * }
      * 
+     * /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+     * 
+     * 
+     * EXEMPLO declaração de dependência do projeto usando DSL
+     * 
+     * \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+     * 
+     * biuld.gradle.kts
+     * 
+     * publins {
+     * 
+     * `java-library`
+     * 
+     * }
+     * 
+     * repositories {
+     * 
+     * mavenCentral()
+     * 
+     * }
+     * 
+     * dependencies {
+     * 
+     * implementation("org.springframework:spring-web:5.+")
+     * 
+     * }
      * 
      */
 
