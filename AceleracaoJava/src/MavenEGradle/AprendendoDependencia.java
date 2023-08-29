@@ -38,6 +38,58 @@ public class AprendendoDependencia {
      * 
      * </project>
      * 
+     * 
+     * 
+     * === Gradle ===
+     * 
+     * 
+     * As grandes diferenças entre Gradle e Maven são:
+     * 
+     * O Gradle é facilmente customizável, visto que com ele você cria seu próprio script em
+     * linguagem de programação (embora seja um pouco mais complexo, é mais livre), enquanto o Maven
+     * é mais travado devido à sua “simplicidade”. O Gradle tem um mecanismo de incrementalidade, ou
+     * seja, depois da primeira vez que o script de build é aplicado, somente os arquivos que
+     * sofrerem mudanças e ou forem adicionados a esse script é que vão passar pelo processo de
+     * build novamente. Esse mecanismo acelera muito o tempo de build de um projeto. A cada build
+     * gerada, o Gradle gera um cache para ele. Se nada mudou desde a última build, o Gradle te dá a
+     * versão que está no cache, acelerando o tempo de build de um projeto.
+     * 
+     * Configurando Gradle programaticamente
+     * 
+     * Usando Gradle, temos a opção de fazer as declarações programaticamente, usando uma DSL
+     * (veremos mais adiante sobre) para Groovy ou Kotlin, um pouco diferente do XML que encontramos
+     * em projetos Maven. Além disso, o Gradle suporta dependências tanto Maven quanto Ivy (usado
+     * pelo Ant), sendo possível usar múltiplos repositórios diferentes em formatos diferentes.
+     * 
+     * 
+     * Gradle e sua DSL para configurações
+     * 
+     * No exemplo a seguir, podemos ver como é simplicada a maneira de declararmos novos
+     * repositórios de dependência usando a DSL em Kotlin:
+     * 
+     * \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+     * 
+     * build.gradle.kts
+     * 
+     * repositories {
+     * 
+     * mavenCentral()
+     * 
+     * maven {
+     * 
+     * url = uri("https://repo.spring.io/release")
+     * 
+     * }
+     * 
+     * maven {
+     * 
+     * url = uri("https://repo.spring.io/release")
+     * 
+     * }
+     * 
+     * }
+     * 
+     * 
      */
 
   }
