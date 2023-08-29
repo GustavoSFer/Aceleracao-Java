@@ -28,5 +28,7 @@ public class PassoAPasso {
    * 7 - test
    * 
    * 8 - deixe em branco.
+   * 
+   * gradle biuld -> comando para instalar as dependencias.
    */
 }
