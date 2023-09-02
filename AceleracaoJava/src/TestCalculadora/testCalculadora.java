@@ -16,6 +16,8 @@ class testCalculadora {
   void testSubtrair() {
     Calculadora sub = new Calculadora();
     assertEquals(7, sub.subtrair(10, 3));
+    assertEquals(0, sub.subtrair(100, 100));
+    assertEquals(-7, sub.subtrair(3, -10));
   }
 
 }
