@@ -1,9 +1,11 @@
 package TestCalculadora;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import TestJUnit.Calculadora;
 
+@DisplayName("Realizae teste da nossa classe calculadora!")
 class testCalculadora {
 
   @Test
