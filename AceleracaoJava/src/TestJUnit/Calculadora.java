@@ -9,7 +9,12 @@ public class Calculadora {
   }
 
   public float subtrair(float n1, float n2) {
-    return n2 - n1;
+    float positivoOuNegativo = Math.signum(n1);
+    if (Math.signum(n1) == -1 || Math.signum(n2) == -1) {
+      resultado = (n1) + (n2);
+      return resultado;
+    }
+    return n1 - n2;
   }
 
   public float multiplicar(float n1, float n2) {
