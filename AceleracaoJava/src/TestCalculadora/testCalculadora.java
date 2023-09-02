@@ -13,4 +13,9 @@ class testCalculadora {
     assertEquals(9, conta.somar(7, 2));
   }
 
+  void testSubtrair() {
+    Calculadora sub = new Calculadora();
+    assertEquals(7, sub.subtrair(10, 3));
+  }
+
 }
