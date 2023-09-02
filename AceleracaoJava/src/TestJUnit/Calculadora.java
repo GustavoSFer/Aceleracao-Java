@@ -21,4 +21,11 @@ public class Calculadora {
     resultado = n1 * n2;
     return resultado;
   }
+
+  public boolean verificarDividendo(float n1) {
+    if (n1 != 0) {
+      return true;
+    }
+    return false;
+  }
 }
