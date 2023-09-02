@@ -10,7 +10,7 @@ class testCalculadora {
   void testCalculadora() {
     Calculadora conta = new Calculadora();
     assertEquals(12, conta.somar(7, 5));
-    assertEquals(9, conta.somar(7, 5));
+    assertEquals(9, conta.somar(7, 2));
   }
 
 }
