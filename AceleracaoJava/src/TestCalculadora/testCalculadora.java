@@ -9,6 +9,7 @@ import TestJUnit.Calculadora;
 class testCalculadora {
 
   @Test
+  @DisplayName("Realizando teste de Somar")
   void testCalculadora() {
     Calculadora conta = new Calculadora();
     assertEquals(12, conta.somar(7, 5));
@@ -16,6 +17,7 @@ class testCalculadora {
   }
 
   @Test
+  @DisplayName("Realizando teste de subtrair")
   void testSubtrair() {
     Calculadora sub = new Calculadora();
     assertEquals(7, sub.subtrair(10, 3));
@@ -24,6 +26,7 @@ class testCalculadora {
   }
 
   @Test
+  @DisplayName("Realizando teste de Multiplicar")
   void testMultiplicar() {
     Calculadora mult = new Calculadora();
     assertEquals(6, mult.multiplicar(2, 3));
