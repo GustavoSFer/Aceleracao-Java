@@ -1,8 +1,7 @@
 package TestCalculadora;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import TestJUnit.Calculadora;
@@ -38,11 +37,21 @@ class testCalculadora {
   }
 
 
+  // @Test
+  // @DisplayName("Realizando teste com booleano")
+  // void testVerificarDividendo() {
+  // Calculadora bo = new Calculadora();
+  // assertTrue(bo.verificarDividendo(5));
+  // assertFalse(bo.verificarDividendo(0));
+  // }
+
   @Test
-  @DisplayName("Realizando teste com booleano")
-  void testVerificarDividendo() {
-    Calculadora bo = new Calculadora();
-    assertTrue(bo.verificarDividendo(5));
-    assertFalse(bo.verificarDividendo(0));
+  @DisplayName("Realizando teste de excessão de erro!")
+  void testDividirPorZero() {
+    Calculadora cal = new Calculadora();
+    assertThrows(ArithmeticException.class, () -> {
+      cal.dividir(3, 0);
+    });
   }
+
 }

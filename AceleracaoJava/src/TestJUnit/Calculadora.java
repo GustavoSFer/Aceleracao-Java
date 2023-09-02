@@ -22,10 +22,14 @@ public class Calculadora {
     return resultado;
   }
 
-  public boolean verificarDividendo(float n1) {
-    if (n1 != 0) {
-      return true;
-    }
-    return false;
+  public int dividir(int x, int y) {
+    return x / y;
   }
+
+  // public boolean verificarDividendo(float n1) {
+  // if (n1 != 0) {
+  // return true;
+  // }
+  // return false;
+  // }
 }
