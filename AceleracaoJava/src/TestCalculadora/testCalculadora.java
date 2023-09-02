@@ -1,5 +1,7 @@
 package TestCalculadora;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -35,4 +37,12 @@ class testCalculadora {
     assertEquals(50, mult.multiplicar(10, 5));
   }
 
+
+  @Test
+  @DisplayName("Realizando teste com booleano")
+  void testVerificarDividendo() {
+    Calculadora bo = new Calculadora();
+    assertTrue(bo.verificarDividendo(5));
+    assertFalse(bo.verificarDividendo(0));
+  }
 }
