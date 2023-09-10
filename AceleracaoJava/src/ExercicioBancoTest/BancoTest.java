@@ -18,4 +18,21 @@ class testBanco {
     assertEquals("16548548", banco.getCpf());
   }
 
+  @Test
+  @DisplayName("Verifica o metodo sacar sem ter dinheiro. espero retornar o dinheiro que tenho atual. No caso 0")
+  void testBancoSacar() {
+    Banco banco = new Banco("Teste", "46516548");
+    double valor = banco.sacar(10);
+
+    assertEquals(0, valor);
+  }
+
+  @Test
+  @DisplayName("Verifica o metodo depositar.")
+  void testBancoDepositar() {
+    Banco banco = new Banco("Teste", "46516548");
+    double valor = banco.depositar(1000);
+
+    assertEquals(1000, valor);
+  }
 }
