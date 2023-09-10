@@ -54,4 +54,11 @@ class testCalculadora {
     });
   }
 
+  @Test
+  @DisplayName("Realizando teste de Dividor!")
+  void testDividir() {
+    Calculadora cal = new Calculadora();
+    assertEquals(2, cal.dividir(6, 3));
+  }
+
 }
