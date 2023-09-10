@@ -6,7 +6,7 @@ public class Banco {
   private double valorConta;
   private String nome;
   private String cpf;
-  private ArrayList<String> transacaoTipo;
+  protected ArrayList<String> transacaoTipo;
 
   public Banco(String nome, String cpf) {
     this.nome = nome;

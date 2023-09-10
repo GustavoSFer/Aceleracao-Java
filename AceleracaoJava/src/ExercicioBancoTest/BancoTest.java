@@ -35,4 +35,16 @@ class testBanco {
 
     assertEquals(1000, valor);
   }
+
+  @Test
+  @DisplayName("Verifica o metodo Movimentacao.")
+  void testBancoMovimentacao() {
+    Banco banco = new Banco("Teste", "46516548");
+    double valorD = banco.depositar(1000);
+    double valorS = banco.sacar(150);
+
+    assertEquals(2, banco.transacaoTipo.size());
+    assertTrue(banco.transacaoTipo.contains("Depositar"));
+  }
+
 }
