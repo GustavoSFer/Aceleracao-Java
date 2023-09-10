@@ -47,4 +47,28 @@ class testBanco {
     assertTrue(banco.transacaoTipo.contains("Depositar"));
   }
 
+  @Test
+  @DisplayName("Verifica Get nome.")
+  void testBancoGetNome() {
+    Banco banco = new Banco("Teste", "46516548");
+
+    assertEquals("Teste", banco.getNome());
+  }
+
+  @Test
+  @DisplayName("Verifica o gte valor conta.")
+  void testBancoGetValorConta() {
+    Banco banco = new Banco("Teste", "46516548");
+    banco.depositar(100);
+
+    assertEquals(100, banco.getValorConta());
+  }
+
+  @Test
+  @DisplayName("Verifica o get cpf.")
+  void testBancoGetCpf() {
+    Banco banco = new Banco("Teste", "46516548");
+
+    assertEquals("46516548", banco.getCpf());
+  }
 }
