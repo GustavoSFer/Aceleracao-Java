@@ -1,0 +1,16 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.trybe</groupId>
+  <artifactId>trybe-webapp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <dependencies>
+	  <dependenct>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-web</artifactId>
+		  <version>2.6.2</version>
+	  </dependenct>
+  </dependencies>
+</project>
