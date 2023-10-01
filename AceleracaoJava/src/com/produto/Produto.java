@@ -17,4 +17,7 @@ public class Produto {
     this.quantity -= quantity;
   }
 
+  public String toString() {
+    return this.name + ", $: " + this.price + ", " + this.quantity + " unit";
+  }
 }
