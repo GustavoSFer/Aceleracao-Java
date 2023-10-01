@@ -15,8 +15,7 @@ public class MainProduct {
 
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Product data: " + produto.name + ", $" + produto.price + " "
-        + produto.quantity + ", units, total: $ " + produto.totalValueStock());
+    System.out.println(produto);
 
     System.out.println("Adicionar produto: informe a quantidade: ");
     produto.addProduct(sc.nextInt());
