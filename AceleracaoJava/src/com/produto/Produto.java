@@ -13,7 +13,7 @@ public class Produto {
     this.quantity += quantity;
   }
 
-  public void removeProduct() {
+  public void removeProduct(int quantity) {
     this.quantity -= quantity;
   }
 
