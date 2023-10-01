@@ -1,9 +1,9 @@
 package com.produto;
 
 public class Produto {
-  private String name;
-  private double price;
-  private int quantity;
+  public String name;
+  public double price;
+  public int quantity;
 
   public double totalValueStock() {
     return price * quantity;
