@@ -14,4 +14,8 @@ public class Employee {
     this.glossSalary += aumento;
   }
 
+  public String toString() {
+    return "Employee " + this.name + ", $ " + netSalary();
+  }
+
 }
