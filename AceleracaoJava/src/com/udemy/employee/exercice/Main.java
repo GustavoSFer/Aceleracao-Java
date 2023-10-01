@@ -19,6 +19,10 @@ public class Main {
     System.out.print("Informe o valor de desconto:");
     pessoa.tax = sc.nextDouble();
 
+    System.out.println(pessoa);
+
+    pessoa.increaseSalary(10.0);
+    System.out.println(pessoa);
 
     sc.close();
   }
