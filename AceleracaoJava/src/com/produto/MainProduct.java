@@ -1,10 +1,13 @@
 package com.produto;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class MainProduct {
 
   public static void main(String[] args) {
+    Locale.setDefault(Locale.US);
+
     Produto produto = new Produto();
     produto.name = "TV";
     produto.price = 1500;
