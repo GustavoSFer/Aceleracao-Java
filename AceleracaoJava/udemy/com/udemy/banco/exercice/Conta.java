@@ -28,4 +28,20 @@ public class Conta {
     this.numeroConta = numero;
     this.nome = nome;
   }
+
+  public int getNumeroConta() {
+    return this.numeroConta;
+  }
+
+  public String getNome() {
+    return this.nome;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+  public double getSaldo() {
+    return this.saldo;
+  }
 }
