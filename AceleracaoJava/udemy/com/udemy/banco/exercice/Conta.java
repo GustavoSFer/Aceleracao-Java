@@ -4,6 +4,7 @@ public class Conta {
   private int numeroConta;
   private String nome;
   private double saldo;
+  private final double taxaSaque = 5.0;
 
   /**
    * Método construtor com deposito inicial.
@@ -43,5 +44,13 @@ public class Conta {
 
   public double getSaldo() {
     return this.saldo;
+  }
+
+  public void depositar(double valor) {
+    this.saldo += valor;
+  }
+
+  public void sacar(double valor) {
+    this.saldo -= (valor + this.taxaSaque);
   }
 }
