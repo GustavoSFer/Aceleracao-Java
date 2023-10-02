@@ -53,4 +53,8 @@ public class Conta {
   public void sacar(double valor) {
     this.saldo -= (valor + this.taxaSaque);
   }
+
+  public String toString() {
+    return "Acount " + this.numeroConta + ", Holder: " + this.nome + ", balance: " + this.saldo;
+  }
 }
