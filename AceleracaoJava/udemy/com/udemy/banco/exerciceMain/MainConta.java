@@ -16,9 +16,9 @@ public class MainConta {
     System.out.println("Infome o nome do titular: ");
     String nome = sc.nextLine();
     System.out.println("Deseja fazer um deposito inicial? s/n");
-    String deposito = sc.nextLine();
+    char deposito = sc.next().charAt(0);
 
-    if (deposito.equals("s")) {
+    if (deposito == 's') {
       System.out.println("Informe o valor do deposito");
       valor = sc.nextDouble();
     }
