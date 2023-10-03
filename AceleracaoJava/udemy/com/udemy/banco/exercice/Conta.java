@@ -55,6 +55,7 @@ public class Conta {
   }
 
   public String toString() {
-    return "Acount " + this.numeroConta + ", Holder: " + this.nome + ", balance: " + this.saldo;
+    return "Acount " + this.numeroConta + ", Holder: " + this.nome + ", balance: "
+        + String.format("%.2f", this.saldo);
   }
 }
