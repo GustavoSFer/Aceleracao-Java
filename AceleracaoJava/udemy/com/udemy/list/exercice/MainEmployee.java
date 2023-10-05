@@ -26,6 +26,24 @@ public class MainEmployee {
       employees.add(new Employee(id, nome, salario));
     }
 
+    System.out.println("Informe o id do funcionário que deseja realizar o aumento salarial: ");
+    int id = sc.nextInt();
+
+    for (Employee y : employees) {
+      if (y.getId() == id) {
+        System.out.println("Informe o valor em porcentagem: ");
+        int porcentagem = sc.nextInt();
+        y.aumentarSalario(porcentagem);
+      } else {
+        System.out.println("Id não encontrado!");
+      }
+    }
+
+    System.out.println("Lista dos funcionários:");
+    for (Employee y : employees) {
+      System.out.println(y.getId() + " " + y.getName() + " " + y.getSalario());
+    }
+
     sc.close();
   }
 
