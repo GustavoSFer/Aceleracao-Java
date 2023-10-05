@@ -23,16 +23,16 @@ public class Employee {
     this.salario = salario;
   }
 
+  public void aumentarSalario(int porcentagem) {
+    this.salario += this.salario * porcentagem;
+  }
+
   public String getName() {
     return name;
   }
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public double getSalario() {
-    return salario;
   }
 
   public void setSalario(double salario) {
