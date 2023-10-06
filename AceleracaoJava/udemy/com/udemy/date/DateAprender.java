@@ -25,6 +25,13 @@ public class DateAprender {
     System.out.println(data.getMonthValue()); // pegando o valor numerico do mes
     System.out.println(data.getDayOfMonth());
 
+    // Adicionando mais dias em nossa data
+    System.out.println(data.plusDays(10));
+
+    // mudando o mês e salvando em uma varialvel
+    LocalDate outroMes = data.plusMonths(2);
+    System.out.println(outroMes.format(brasil));
+
   }
 
 }
