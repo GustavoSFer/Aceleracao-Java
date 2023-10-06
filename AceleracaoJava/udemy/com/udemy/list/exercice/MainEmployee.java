@@ -29,14 +29,13 @@ public class MainEmployee {
     System.out.println("Informe o id do funcionário que deseja realizar o aumento salarial: ");
     int id = sc.nextInt();
 
-    for (Employee y : employees) {
-      if (y.getId() == id) {
-        System.out.println("Informe o valor em porcentagem: ");
-        int porcentagem = sc.nextInt();
-        y.aumentarSalario(porcentagem);
-      } else {
-        System.out.println("Id não encontrado!");
-      }
+    int contem = isExiste(employees, id);
+    if (contem == -1) {
+      System.out.println("Id não encontrado!");
+    } else {
+      System.out.println("Informe o valor em porcentagem: ");
+      int porcentagem = sc.nextInt();
+      employees.get(contem).aumentarSalario(porcentagem);
     }
 
     System.out.println("Lista dos funcionários:");
@@ -45,6 +44,15 @@ public class MainEmployee {
     }
 
     sc.close();
+  }
+
+  public static int isExiste(List<Employee> employees, int id) {
+    for (int i = 0; i < employees.size(); i++) {
+      if (employees.get(i).getId() == id) {
+        return i;
+      }
+    }
+    return -1;
   }
 
 }
