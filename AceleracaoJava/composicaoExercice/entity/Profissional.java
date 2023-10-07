@@ -33,17 +33,17 @@ public class Profissional {
   }
 
   public double valorGanho(int ano, int mes) {
-    double soma = 0;
+    double soma = baseSalario;
     Calendar cal = Calendar.getInstance();
     for (ContratoDeHoras c : contratoDeHoras) {
       cal.setTime(c.getDate());
       int c_ano = cal.get(Calendar.YEAR);
       int c_mes = 1 + cal.get(Calendar.MONTH); // mês começa com o 0 até 11.
       if (c_ano == ano && c_mes == mes) {
-        soma += c.getValorPorHora();
+        soma += c.totalValor();
       }
     }
-    return this.baseSalario += soma;
+    return soma;
   }
 
   public NivelProfissional getNivel() {
@@ -62,6 +62,8 @@ public class Profissional {
     return baseSalario;
   }
 
-
+  public Departamento getDepartamento() {
+    return departamento;
+  }
 
 }

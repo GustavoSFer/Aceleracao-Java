@@ -46,7 +46,15 @@ public class AplicacaoMain {
       profissional.addContrato(contrato);
     }
 
+    System.out.println();
+    System.out.print("Entre com o mês e ano (mm/aaaa) para ver o valor total que ganhou: ");
+    String mesEAno = sc.next();
+    int mes = Integer.parseInt(mesEAno.substring(0, 2));
+    int ano = Integer.parseInt(mesEAno.substring(3));
 
+    System.out.println("Nome: " + profissional.getNome());
+    System.out.println("Departamento: " + profissional.getDepartamento().getNome());
+    System.out.println("Ganhos no mes/ano: " + profissional.valorGanho(ano, mes));
 
     sc.close();
   }
