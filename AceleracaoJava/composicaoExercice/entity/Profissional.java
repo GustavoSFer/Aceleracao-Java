@@ -15,11 +15,13 @@ public class Profissional {
   // Um profissional pode ter varioas contratos;
   private List<ContratoDeHoras> contratoDeHoras = new ArrayList<>();
 
-  public Profissional(String nome, NivelProfissional nivel, double baseSalario) {
+  public Profissional(String nome, NivelProfissional nivel, double baseSalario,
+      Departamento departamento) {
     super();
     this.nome = nome;
     this.nivel = nivel;
     this.baseSalario = baseSalario;
+    this.departamento = departamento;
   }
 
   public void addContrato(ContratoDeHoras contrato) {
