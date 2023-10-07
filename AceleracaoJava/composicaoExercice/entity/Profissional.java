@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import entityEnum.NivelProfissional;
 
@@ -19,6 +20,28 @@ public class Profissional {
     this.nome = nome;
     this.nivel = nivel;
     this.baseSalario = baseSalario;
+  }
+
+  public void addContrato(ContratoDeHoras contrato) {
+    contratoDeHoras.add(contrato);
+  }
+
+  public void removerContrato(ContratoDeHoras contrato) {
+    contratoDeHoras.remove(contrato);
+  }
+
+  public double valorGanho(int ano, int mes) {
+    double soma = 0;
+    Calendar cal = Calendar.getInstance();
+    for (ContratoDeHoras c : contratoDeHoras) {
+      cal.setTime(c.getDate());
+      int c_ano = cal.get(Calendar.YEAR);
+      int c_mes = 1 + cal.get(Calendar.MONTH); // mês começa com o 0 até 11.
+      if (c_ano == ano && c_mes == mes) {
+        soma += c.getValorPorHora();
+      }
+    }
+    return this.baseSalario += soma;
   }
 
   public NivelProfissional getNivel() {
