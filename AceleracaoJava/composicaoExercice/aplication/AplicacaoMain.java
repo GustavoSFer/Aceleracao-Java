@@ -4,9 +4,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import entity.ContratoDeHoras;
-import entity.Departamento;
-import entity.Profissional;
+import entities.ContratoDeHoras;
+import entities.Departamento;
+import entities.Profissional;
 import entityEnum.NivelProfissional;
 
 public class AplicacaoMain {

@@ -1,4 +1,4 @@
-package entity;
+package entities;
 
 public class Departamento {
   private String nome;
