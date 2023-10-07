@@ -2,6 +2,7 @@ package com.udemy.date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class DateAprender {
@@ -31,6 +32,17 @@ public class DateAprender {
     // mudando o mês e salvando em uma varialvel
     LocalDate outroMes = data.plusMonths(2);
     System.out.println(outroMes.format(brasil));
+
+    System.out.println();
+    System.out.println("===== HORÁRIO =====");
+    DateTimeFormatter horario = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+    System.out.println(agora.format(horario));
+
+    // com fuso horario
+
+    DateTimeFormatter fusoHorario =
+        DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").withZone(ZoneId.systemDefault());
+    System.out.println(agora.format(fusoHorario));
 
   }
 
