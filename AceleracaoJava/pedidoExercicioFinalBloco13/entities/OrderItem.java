@@ -1,17 +1,15 @@
 package entities;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class OrderItem {
   private int quantity;
   private double price;
+  private Product product;
 
-  private List<Product> produtos = new ArrayList<>();
 
-  public OrderItem(int quantity, double price) {
+  public OrderItem(int quantity, double price, Product product) {
     this.quantity = quantity;
     this.price = price;
+    this.product = product;
   }
 
   public double subtotal() {
@@ -34,8 +32,8 @@ public class OrderItem {
     this.price = price;
   }
 
-  public List<Product> getProdutos() {
-    return produtos;
+  public Product getProdutos() {
+    return product;
   }
 
 
