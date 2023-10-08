@@ -1,16 +1,15 @@
 package entities;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Post {
-  private Date data;
+  private LocalDateTime data;
   private String text;
   private List<Coment> comentarios = new ArrayList<>();
 
-  public Post(Date data, String text) {
-    super();
+  public Post(LocalDateTime data, String text) {
     this.data = data;
     this.text = text;
   }
@@ -23,7 +22,7 @@ public class Post {
     this.text = text;
   }
 
-  public Date getData() {
+  public LocalDateTime getData() {
     return data;
   }
 
