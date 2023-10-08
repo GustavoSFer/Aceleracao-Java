@@ -37,4 +37,16 @@ public class Post {
   public void removeComentario(Coment comentario) {
     this.comentarios.remove(comentario);
   }
+
+  public String toString() {
+    StringBuilder str = new StringBuilder();
+    str.append(this.text + "\n");
+    str.append("Postado em: " + this.data + "\n\n");
+    str.append("== Comentarios: ==\n");
+
+    for (Coment c : comentarios) {
+      str.append(c.getComentario() + "\n");
+    }
+    return str.toString();
+  }
 }
