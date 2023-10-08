@@ -65,4 +65,21 @@ public class Order {
     this.cliente = cliente;
   }
 
+  public String toString() {
+    StringBuilder str = new StringBuilder();
+    str.append("Order Summary: \n");
+    str.append("Order moment " + this.data + "\n");
+    str.append("Name: " + this.cliente.getName() + ", (" + this.cliente.getBirthDate() + ") "
+        + ", email: " + this.cliente.getEmail() + "\n");
+    str.append("Oder Items: \n");
+
+    for (OrderItem item : itens) {
+      str.append(item.toString() + "\n");
+    }
+
+    str.append("Total order value: $: " + this.total());
+
+    return str.toString();
+  }
+
 }

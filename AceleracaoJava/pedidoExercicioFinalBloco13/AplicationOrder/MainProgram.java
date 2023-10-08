@@ -1,4 +1,4 @@
-package Aplication;
+package AplicationOrder;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,7 +19,7 @@ public class MainProgram {
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     try {
-      System.out.println("Entree client data");
+      System.out.println("Entrer client data");
       System.out.print("Name: ");
       String name = sc.nextLine();
       System.out.print("E-mail: ");
@@ -49,7 +49,11 @@ public class MainProgram {
 
         Product product = new Product(productName, price);
         OrderItem orderItem = new OrderItem(quantity, price, product);
+
+        order.addItem(orderItem);
       }
+
+      System.out.println(order);
 
     } catch (ParseException e) {
       System.out.println("Valor informado não encontrado!");

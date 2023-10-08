@@ -36,6 +36,9 @@ public class OrderItem {
     return product;
   }
 
-
+  public String toString() {
+    return this.product.getName() + " " + this.price + ", Quantity: " + this.quantity
+        + " Subtotal: " + this.subtotal();
+  }
 
 }
