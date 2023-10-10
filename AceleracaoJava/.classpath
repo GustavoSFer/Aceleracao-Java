@@ -10,6 +10,7 @@
 	<classpathentry kind="src" path="composicaoExercice"/>
 	<classpathentry kind="src" path="postComents"/>
 	<classpathentry kind="src" path="pedidoExercicioFinalBloco13"/>
+	<classpathentry kind="src" path="herancaPolimor"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
