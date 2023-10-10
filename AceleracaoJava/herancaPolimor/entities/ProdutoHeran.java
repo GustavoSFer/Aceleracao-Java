@@ -12,6 +12,10 @@ public class ProdutoHeran {
     this.price = price;
   }
 
+  public String priceTag() {
+    return this.name + " $ " + this.price;
+  }
+
   public String getName() {
     return name;
   }
