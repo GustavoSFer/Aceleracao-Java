@@ -7,13 +7,12 @@ public class ProdutoHeran {
   public ProdutoHeran() {}
 
   public ProdutoHeran(String name, double price) {
-    super();
     this.name = name;
     this.price = price;
   }
 
   public String priceTag() {
-    return this.name + " $ " + this.price;
+    return name + " $ " + String.format("%.2f", price);
   }
 
   public String getName() {

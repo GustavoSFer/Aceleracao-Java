@@ -9,7 +9,7 @@ public class ProductImport extends ProdutoHeran {
   }
 
   public double totalPrice() {
-    return super.getPrice() * 0.30;
+    return super.getPrice() * this.customFree / 100;
   }
 
   public double getCustomFree() {
