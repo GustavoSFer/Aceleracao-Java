@@ -1,5 +1,7 @@
 package com.udemy.entities;
 
+import com.udemy.exceptions.widthdrawException;
+
 public class Account {
   private int number;
   private String holder;
@@ -41,13 +43,14 @@ public class Account {
     this.balance += value;
   }
 
-  public void widthdraw(double value) {
+  public void widthdraw(double value) throws widthdrawException {
     if (value > this.widthdrawLimit) {
-      System.out.println("Saque maior do que o valor limite diario!");
+      throw new widthdrawException("Saque maior do que o valor limite diario!");
     }
     if (value > this.balance) {
-      System.out.println("Saldo insuficiente!");
+      throw new widthdrawException("Saldo insuficiente!");
     }
+    this.balance -= value;
   }
 
 }
