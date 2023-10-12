@@ -33,14 +33,21 @@ public class Account {
     return balance;
   }
 
-  public void setBalance(double balance) {
-    this.balance = balance;
-  }
-
   public double getWidthdrawLimit() {
     return widthdrawLimit;
   }
 
+  public void deposit(double value) {
+    this.balance += value;
+  }
 
+  public void widthdraw(double value) {
+    if (value > this.widthdrawLimit) {
+      System.out.println("Saque maior do que o valor limite diario!");
+    }
+    if (value > this.balance) {
+      System.out.println("Saldo insuficiente!");
+    }
+  }
 
 }
