@@ -16,8 +16,17 @@ public class LeituraDeArquivo {
     // try catch para tratar o erro.
     try {
       sc = new Scanner(file);
+      // Vamos percorrer o arquivo e verificar se existe a proxima linha e imprimir a linha.
+      while (sc.hasNextLine()) {
+        System.out.println(sc.nextLine());
+      }
     } catch (IOException e) {
       System.out.println("Error: " + e.getMessage());
+    } finally {
+      // Vamos fechar o Scanner caso ele tenha sido aberto
+      if (sc != null) {
+        sc.close();
+      }
     }
   }
 
