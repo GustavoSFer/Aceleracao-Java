@@ -15,4 +15,14 @@ public class PrintService<T> {
   public void addDado(T dado) {
     dados.add(dado);
   }
+
+  public void print() {
+    System.out.print("[");
+    for (T dado : dados) {
+      if (dados.size() > 0) {
+        System.out.print(dado + ", ");
+      }
+    }
+    System.out.println("]");
+  }
 }
