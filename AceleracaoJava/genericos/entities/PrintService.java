@@ -18,11 +18,14 @@ public class PrintService<T> {
 
   public void print() {
     System.out.print("[");
-    for (T dado : dados) {
-      if (dados.size() > 0) {
-        System.out.print(" " + dado + " ");
-      }
+    if (!dados.isEmpty()) {
+      System.out.print(dados.get(0));
     }
+
+    for (int i = 1; i < dados.size(); i++) {
+      System.out.print(", " + dados.get(i));
+    }
+
     System.out.println("]");
   }
 }
