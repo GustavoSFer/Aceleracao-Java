@@ -20,7 +20,7 @@ public class PrintService<T> {
     System.out.print("[");
     for (T dado : dados) {
       if (dados.size() > 0) {
-        System.out.print(dado + ", ");
+        System.out.print(" " + dado + " ");
       }
     }
     System.out.println("]");
