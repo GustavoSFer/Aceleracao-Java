@@ -49,9 +49,19 @@ public class BrincandoComListas {
 
     produtos.sort(comparator);
 
+    System.out.println("== Listando em ordem alfabetica ==");
+
     // Outra forma de fazer e direto no nosso sort ficando assim a nossa 4ª forma de fazer.
     produtos.sort((p1, p2) -> p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase()));
+    for (Produto p : produtos) {
+      System.out.println(p);
+    }
 
+    System.out.println();
+
+    System.out.println("== Removendo produtos acima de 2mil ==");
+    // Removendo produtos que seu valor seja superior a 2.000,00
+    produtos.removeIf(p -> p.getPreco() > 2000.00);
 
     for (Produto p : produtos) {
       System.out.println(p);
