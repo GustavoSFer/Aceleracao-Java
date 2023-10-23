@@ -15,6 +15,7 @@
 	<classpathentry kind="src" path="leituraDeArquivos"/>
 	<classpathentry kind="src" path="genericos"/>
 	<classpathentry kind="src" path="Set"/>
+	<classpathentry kind="src" path="Map"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
