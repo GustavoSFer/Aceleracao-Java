@@ -1,6 +1,7 @@
 package udemy.lambda.application;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import udemy.lambda.entities.Produto;
 
@@ -18,7 +19,26 @@ public class BrincandoComListas {
     produtos.add(new Produto("Açicar", 12.00));
 
     // Listando nosso produtos em ordem alfabetica
-    produtos.sort(new MeuComparador());
+    // produtos.sort(new MeuComparador()); // Comentando 1ª Caso de como ser feito
+    /**
+     * Esta é uma forma de fazer a comparação. Criando uma classe que implementa de
+     * Comparator<Classe que desejamos comparar> e assim no programa principal instanciamos essa
+     * nossa classe de comparação
+     * 
+     * A outra forma de fazer, é fazer a implementação do Comparator direto no nosso sistema
+     * principal. Conforme exemplo abaixo:
+     */
+
+    Comparator<Produto> comparador = new Comparator<Produto>() {
+
+      @Override
+      public int compare(Produto o1, Produto o2) {
+        // TODO Auto-generated method stub
+        return 0;
+      }
+
+    };
+
     for (Produto p : produtos) {
       System.out.println(p);
     }
