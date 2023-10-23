@@ -35,6 +35,15 @@ public class FunctionProduto {
     // imprimindo os nomes
     nomeMaiusculo.forEach(System.out::println);
 
+
+    System.out.println("==== FAZENDO O MESMO EM INLINE  ====");
+
+    // inline.
+    List<String> nomeMinusculoInline =
+        produtos.stream().map(p -> p.getNome().toLowerCase()).collect(Collectors.toList());
+
+    // imprimindo os nomes
+    nomeMinusculoInline.forEach(System.out::println);
   }
 
 }
