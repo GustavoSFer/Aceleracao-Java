@@ -1,12 +1,12 @@
 package udemy.map.entities;
 
+import java.util.Objects;
+
 public class Candidato {
   private String nome;
-  private int votos;
 
-  public Candidato(String nome, int votos) {
+  public Candidato(String nome) {
     this.nome = nome;
-    this.votos = votos;
   }
 
   public String getNome() {
@@ -17,13 +17,21 @@ public class Candidato {
     this.nome = nome;
   }
 
-  public int getVotos() {
-    return votos;
+  @Override
+  public int hashCode() {
+    return Objects.hash(nome);
   }
 
-  public void setVotos(int votos) {
-    this.votos = votos;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Candidato other = (Candidato) obj;
+    return Objects.equals(nome, other.nome);
   }
-
 
 }

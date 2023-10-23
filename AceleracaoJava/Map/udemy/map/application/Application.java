@@ -17,7 +17,29 @@ public class Application {
 
     System.out.println("Informe o caminho do arquivo: ");
     String path = sc.next();
+
     try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+      String line = br.readLine();
+      while (line != null) {
+        String[] urna = line.split(" ");
+        String nome = urna[0];
+        int votos = Integer.parseInt(urna[1]);
+
+        Candidato candidato = new Candidato(nome);
+
+        if (candidatos.containsKey(candidato)) {
+          int votosComputados = candidatos.get(candidato);
+          candidatos.put(candidato, votos + votosComputados);
+        } else {
+          candidatos.put(candidato, votos);
+        }
+
+        line = br.readLine();
+      }
+
+      for (Candidato key : candidatos.keySet()) {
+        System.out.println(key.getNome() + " " + candidatos.get(key));
+      }
 
     } catch (IOException e) {
       e.printStackTrace();
