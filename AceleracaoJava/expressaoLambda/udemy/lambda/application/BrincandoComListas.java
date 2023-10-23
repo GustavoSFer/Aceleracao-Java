@@ -16,7 +16,7 @@ public class BrincandoComListas {
     produtos.add(new Produto("Carregador", 500.00));
     produtos.add(new Produto("Bola", 120.00));
     produtos.add(new Produto("Mouse", 60.00));
-    produtos.add(new Produto("Açicar", 12.00));
+    produtos.add(new Produto("Açucar", 12.00));
 
     // Listando nosso produtos em ordem alfabetica
     // produtos.sort(new MeuComparador()); // Comentando 1ª Caso de como ser feito
@@ -33,11 +33,11 @@ public class BrincandoComListas {
 
       @Override
       public int compare(Produto o1, Produto o2) {
-        // TODO Auto-generated method stub
-        return 0;
+        return o1.getNome().toUpperCase().compareTo(o2.getNome().toUpperCase());
       }
-
     };
+
+    produtos.sort(comparador);
 
     for (Produto p : produtos) {
       System.out.println(p);
