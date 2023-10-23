@@ -49,6 +49,10 @@ public class BrincandoComListas {
 
     produtos.sort(comparator);
 
+    // Outra forma de fazer e direto no nosso sort ficando assim a nossa 4ª forma de fazer.
+    produtos.sort((p1, p2) -> p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase()));
+
+
     for (Produto p : produtos) {
       System.out.println(p);
     }
