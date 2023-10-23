@@ -25,5 +25,8 @@ public class Produto {
     this.preco = preco;
   }
 
-
+  @Override
+  public String toString() {
+    return this.getNome() + " - " + String.format("%.2f", this.getPreco());
+  }
 }
