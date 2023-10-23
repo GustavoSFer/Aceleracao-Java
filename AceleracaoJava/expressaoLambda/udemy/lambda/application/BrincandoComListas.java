@@ -29,15 +29,25 @@ public class BrincandoComListas {
      * principal. Conforme exemplo abaixo:
      */
 
-    Comparator<Produto> comparador = new Comparator<Produto>() {
+    /*
+     * Comparator<Produto> comparador = new Comparator<Produto>() {
+     * 
+     * @Override public int compare(Produto o1, Produto o2) { return
+     * o1.getNome().toUpperCase().compareTo(o2.getNome().toUpperCase()); } };
+     * 
+     * produtos.sort(comparador);
+     */
 
-      @Override
-      public int compare(Produto o1, Produto o2) {
-        return o1.getNome().toUpperCase().compareTo(o2.getNome().toUpperCase());
-      }
+    /**
+     * Vamos agora para a nossa 3ª opção de realizar e dessa forma, agora usando as expressões
+     * lambdas
+     */
+
+    Comparator<Produto> comparator = (p1, p2) -> {
+      return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
     };
 
-    produtos.sort(comparador);
+    produtos.sort(comparator);
 
     for (Produto p : produtos) {
       System.out.println(p);
