@@ -66,6 +66,13 @@ public class BrincandoComListas {
     for (Produto p : produtos) {
       System.out.println(p);
     }
+
+
+    // Vamos verificar se um objeto esta na nossa lista - obs: Para fazer essa validação precisamos
+    // do comparator hashcode e equals no nosso objeto
+    Produto carregador = new Produto("Carregador", 500);
+
+    System.out.println("Existe carregado na lista?: " + produtos.contains(carregador));
   }
 
 }
